@@ -1,4 +1,4 @@
-export const router = express => {
+export const defaultRoute = express => {
   const r = express.Router()
 
   r.get('/', (req, res, next) => {
