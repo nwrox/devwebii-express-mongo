@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  api:
+    image: devwebii_api:1.0
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - 3001:3000
+    environment:
+      DATABASE_CONNECTION_STRING: "mongodb://admindevwebii:admin@mongo:27017/devwebii?retryWrites=true&w=majority"
+  mongo:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./data:/data/db
+      - ./mongo_init:/docker-entrypoint-initdb.d
+    # network_mode: "host"
+    ports:
+      - 27017:27107
+    environment:
+      MONGO_INITDB_DATABASE: devwebii

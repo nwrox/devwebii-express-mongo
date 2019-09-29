@@ -1,0 +1,8 @@
+data
+docker-compose*
+Dockerfile*
+*env*
+.git
+.gitignore
+mongo_init
+node_modules
