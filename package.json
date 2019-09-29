@@ -6,7 +6,8 @@
   "scripts": {
     "config-lint": "eslint --init",
     "dev": "nodemon --exec babel-node src/server.js",
-    "lint": "eslint --ext .js --ignore-path .gitignore src/**"
+    "lint": "eslint --ext .js --ignore-path .gitignore src/**",
+    "prod": "babel-node src/server.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
