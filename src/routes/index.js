@@ -3,7 +3,7 @@ export const defaultRoute = express => {
 
   r.get('/', (req, res, next) => {
     res.status(200).send({
-      title: 'MentionsAPI',
+      title: 'DevWebIIAPI',
       version: '1.0.0'
     })
   })
